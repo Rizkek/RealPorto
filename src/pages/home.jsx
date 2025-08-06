@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
   FaBars, FaTimes, FaPaintBrush, FaMobileAlt, FaVideo,
-  FaCode, FaBlender, FaFilm,
+  FaCode, FaFilm,
   FaPaperPlane, FaPhone, FaWhatsapp, FaTwitter, FaInstagram, FaLinkedin, FaGithub,
   FaArrowRight, FaTrophy, FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp,
 } from 'react-icons/fa';
@@ -166,7 +166,6 @@ export default function Home() {
     { icon: <SiFigma className="text-purple-500" />, name: 'Figma' },
     { icon: <SiCanva className="text-blue-500" />, name: 'Canva' },
     { icon: <SiCoreldraw className="text-green-500" />, name: 'Corel Draw' },
-    { icon: <FaBlender className="text-orange-400" />, name: 'Blender' },
     { icon: <FaVideo className="text-purple-600" />, name: 'Premiere Pro' },
     { icon: <FaFilm className="text-violet-600" />, name: 'After Effects' },
   ];
