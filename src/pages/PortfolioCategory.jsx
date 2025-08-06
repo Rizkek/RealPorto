@@ -4,8 +4,8 @@ import { HashLink } from 'react-router-hash-link';
 import
 { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaEye, FaCalendar,
 FaUser, FaTags, FaFigma, FaPalette, FaTimes } from 'react-icons/fa';
-import backgroundMusic from '../../audio/gema.mp3';
-import filmBullyingVideo from '../../audio/film-bullying.mp4';
+import backgroundMusic from '/audio/gema.mp3';
+import filmBullyingVideo from '/audio/film-bullying.mp4';
 
 // DATA PORTOFOLIO
 const portfolioData = {
