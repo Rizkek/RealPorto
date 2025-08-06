@@ -138,21 +138,21 @@ export default function Home() {
 
   const awardsItems = [
     {
-      image: "/images/sertifikat-1.jpg",
+      image: "/images/Sertifikat-1.jpg",
       icon: <FaTrophy className="w-8 h-8" />,
       title: "Juara 3 Lomba Inovasi Digital",
       organizer: "HIMARPL",
       desc: "Meraih posisi ketiga dalam kompetisi UI/UX bertema EduTech.",
     },
     {
-      image: "/images/sertifikat-02.jpg",
+      image: "/images/Sertifikat-02.jpg",
       icon: <FaTrophy className="w-8 h-8" />,
       title: "Sertifikasi Digital Marketing",
       organizer: "Bootcamp 2025",
       desc: "Menyelesaikan pelatihan strategi branding dan pemasaran digital.",
     },
     {
-      image: "/images/sertifikat-3.jpg",
+      image: "/images/Sertifikat-3.jpg",
       icon: <FaTrophy className="w-8 h-8" />,
       title: "Sertifikasi Pemrograman",
       organizer: "Dicoding - 2025",
