@@ -11,9 +11,9 @@ const About = () => {
             <div className="flex flex-col lg:flex-row items-center gap-16">
                 <motion.div
                     className="lg:w-1/3"
-                    initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <div className="relative group">
@@ -30,9 +30,9 @@ const About = () => {
 
                 <motion.div
                     className="lg:w-2/3"
-                    initial={{ x: 100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <AnimatedSectionTitle>Tentang Saya</AnimatedSectionTitle>

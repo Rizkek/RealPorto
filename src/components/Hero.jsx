@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FadeInUp } from './Shared';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const [text] = useTypewriter({
@@ -52,6 +52,7 @@ const Hero = () => {
                     </motion.a>
                 </motion.div>
             </div>
+            <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
         </motion.header>
     );
 };
