@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Services = () => {
     return (
         <section id="services" className="py-20 md:py-32 px-6 md:px-[8%] bg-gray-800">
-            <AnimatedSectionTitle>Layanan Saya</AnimatedSectionTitle>
+            <AnimatedSectionTitle>Keahlian Saya</AnimatedSectionTitle>
             <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
                 initial="initial"
