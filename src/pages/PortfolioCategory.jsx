@@ -1,12 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
-import
-{ FaArrowLeft, FaExternalLinkAlt, FaGithub, FaEye, FaCalendar,
-FaUser, FaTags, FaFigma, FaPalette, FaTimes } from 'react-icons/fa';
+// import { HashLink } from 'react-router-hash-link';
+import {
+  FaArrowLeft, FaExternalLinkAlt, FaGithub, FaEye, FaCalendar,
+  FaUser, FaTags, FaFigma, FaPalette, FaTimes
+} from 'react-icons/fa';
 import backgroundMusic from '/audio/gema.mp3';
 import filmBullyingVideo from '/audio/film-bullying.mp4';
 
+const FadeInUp = {
+  intial: {
+    opacity: 0,
+    y: 20
+  },
+  animate: {
+    opacity: 1,
+    y: 0
+  }
+}
 // DATA PORTOFOLIO
 const portfolioData = {
   "desain-graphic": {
@@ -94,7 +105,7 @@ const portfolioData = {
         id: 10,
         title: "Website Ngajar.id",
         image: "/images/work-2.jpg",
-        description: "Website perusahaan yang responsive dan SEO-friendly dengan CMS custom untuk easy content management.",
+        description: "Website pemebalajaran yang responsive dan SEO-friendly dengan CMS custom untuk easy content management.",
         client: "UAS Kampus",
         year: "2025",
         duration: "2 minggu",
@@ -115,6 +126,32 @@ const portfolioData = {
         liveLink: "https://nasihangat.github.io/TopApin/Index.html",
         github: "https://github.com/NasiHangat/TopApin",
         designLink: "#",
+      },
+      {
+        id: 12,
+        title: "Website Company Profile",
+        image: "/images/work-7.jpg",
+        description: "Compro Divus adalah website untuk mempromosikan perusahaan konsultan",
+        client: "PT Divus",
+        year: "2025",
+        duration: "2 Bulan",
+        tools: ["Next.js", "Tailwind CSS"],
+        liveLink: "#",
+        github: "https://github.com/dadunch/next-divus",
+        designLink: "https://www.figma.com/design/yeOnnqMimQEy4LiOkUvVYG/Redesign-UI-Divus?node-id=754-247&t=1h2KzfUZ91L9fssI-1",
+      },
+      {
+        id: 13,
+        title: "Website Portofolio Pribadi",
+        image: "/images/work-6.jpg",
+        description: "Ini adalah website portofolio pribadi yang menawarkan informasi tentang saya, pengalaman kerja, dan proyek-proyek yang pernah saya kerjakan.",
+        client: "Self",
+        year: "2025",
+        duration: "3 minggu",
+        tools: ["React.js", "Tailwind CSS"],
+        liveLink: "https://real-porto.vercel.app",
+        github: "https://github.com/Rizkek/RealPorto",
+        designLink: "#",
       }
     ]
   },
@@ -123,7 +160,7 @@ const portfolioData = {
     description: "Editing video berkualitas tinggi untuk berbagai kebutuhan konten digital.",
     projects: [
       {
-        id: 12,
+        id: 14,
         title: "Film Bullying",
         image: "/images/work-3.jpg",
         description: "Film pendek ini menggambarkan bagaimana tekanan, perundungan, dan sikap diam di lingkungan sekolah bisa menjadi luka yang tak terlihat. Lewat sudut pandang korban, kita diajak menyadari bahwa tidak semua tawa adalah tanda baik-baik saja. Kadang, seseorang menyerah... saat semua sudah terlalu sunyi.",
@@ -452,7 +489,7 @@ export default function PortfolioCategory() {
   return (
     <>
       <LocalAudioPlayer src={backgroundMusic} />
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div className="min-w-7xl bg-gray-900 text-white">
         {/* Header Section */}
         <div className="relative bg-gradient-to-br from-pink-900/30 to-violet-900/30 py-24 pb-8">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.png')] opacity-10"></div>
@@ -526,13 +563,13 @@ export default function PortfolioCategory() {
               Mari berkolaborasi untuk mewujudkan project impian Anda
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <HashLink
-                smooth to="/#contact"
+              <a
+                href="/#contact"
                 className="bg-gradient-to-r from-pink-600 to-violet-600 text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition-transform"
                 aria-label="Hubungi Saya"
               >
                 Hubungi Saya
-              </HashLink>
+              </a>
             </div>
           </div>
         </div>
