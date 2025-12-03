@@ -6,7 +6,6 @@ import PortfolioCategory from "./pages/PortfolioCategory";
 export default function App() {
   return (
     <Router>
-      <Background3D />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio/:category" element={<PortfolioCategory />} />
