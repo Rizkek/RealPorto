@@ -43,7 +43,7 @@ const Hero = () => {
                     </motion.p>
                     <motion.a
                         variants={FadeInUp}
-                        href="/images/CV.pdf"
+                        href="/images/CV_Rizqy_Oxinos.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-10 inline-block bg-gradient-to-r from-pink-600 to-violet-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-pink-500/30 transform hover:scale-105 transition-all duration-300"
