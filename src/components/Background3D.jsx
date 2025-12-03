@@ -18,7 +18,7 @@ const StarField = () => {
                 ref={ref}
                 radius={100}
                 depth={50}
-                count={5000}
+                count={1500}
                 factor={4}
                 saturation={0}
                 fade
@@ -31,7 +31,7 @@ const StarField = () => {
 const Background3D = () => {
     return (
         <div className="fixed inset-0 z-[-1] bg-gray-900 pointer-events-none">
-            <Canvas camera={{ position: [0, 0, 1] }}>
+            <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]}>
                 <StarField />
             </Canvas>
         </div>

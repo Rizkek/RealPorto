@@ -24,7 +24,7 @@ const PortfolioModal = ({ project, onClose }) => {
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl transition-colors">
                     <FaTimes />
                 </button>
-                <img src={project.image} alt={project.title} className="w-full h-64 md:h-80 object-cover rounded-xl mb-6" />
+                <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover rounded-xl mb-6" />
                 <h2 className="text-3xl font-bold text-white mb-3">{project.title}</h2>
                 <p className="text-gray-300 leading-relaxed text-lg">{project.desc}</p>
             </motion.div>
@@ -66,6 +66,8 @@ const Portfolio = () => {
                                     <img
                                         src={item.image}
                                         alt={item.title}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110 rounded-2xl"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300 rounded-2xl"></div>

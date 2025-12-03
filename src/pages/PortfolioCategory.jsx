@@ -187,6 +187,8 @@ const ProjectCard = ({ project, onClick }) => (
       <img
         src={project.image}
         alt={project.title}
+        loading="lazy"
+        decoding="async"
         className="w-full object-cover transition-transform duration-700 group-hover:scale-110 will-change-transform aspect-video" // <-- Ubah h-XX menjadi aspect-video
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -288,6 +290,8 @@ const ProjectModal = ({ project, onClose }) => {
             <img
               src={project.image}
               alt={project.title}
+              loading="lazy"
+              decoding="async"
               className="w-full object-cover aspect-video"
             />
           )}

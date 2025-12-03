@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import Services from "../components/Services";
-import Skills from "../components/Skills";
-import Portfolio from "../components/Portfolio";
-import Awards from "../components/Awards";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
-import {Link} from 'react-router-dom';
+
+const Services = lazy(() => import("../components/Services"));
+const Skills = lazy(() => import("../components/Skills"));
+const Portfolio = lazy(() => import("../components/Portfolio"));
+const Awards = lazy(() => import("../components/Awards"));
+const Contact = lazy(() => import("../components/Contact"));
+const Footer = lazy(() => import("../components/Footer"));
 
 export default function Home() {
   return (
@@ -17,12 +17,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Services />
-      <Skills />
-      <Portfolio />
-      <Awards />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<div className="min-h-screen bg-gray-900" />}>
+        <Services />
+        <Skills />
+        <Portfolio />
+        <Awards />
+        <Contact />
+        <Footer />
+      </Suspense>
       <ScrollToTop />
     </div>
   );

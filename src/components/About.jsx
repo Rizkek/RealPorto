@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSectionTitle, FadeInUp } from './Shared';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const [tab, setTab] = useState("skills");
@@ -21,6 +21,8 @@ const About = () => {
                         <img
                             src="/images/27.jpg"
                             alt="Tentang Saya"
+                            loading="lazy"
+                            decoding="async"
                             className="relative rounded-2xl w-full shadow-2xl transform transition-transform duration-500"
                         />
                     </div>
@@ -58,8 +60,8 @@ const About = () => {
                                 key={t}
                                 onClick={() => setTab(t)}
                                 className={`flex-1 py-3 px-6 rounded-lg text-sm md:text-base font-medium transition-all duration-300 capitalize ${tab === t
-                                        ? "bg-gradient-to-r from-pink-600 to-violet-600 shadow-lg text-white"
-                                        : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                                    ? "bg-gradient-to-r from-pink-600 to-violet-600 shadow-lg text-white"
+                                    : "text-gray-400 hover:text-white hover:bg-gray-700/50"
                                     }`}
                             >
                                 {t === 'skills' ? 'Keahlian' : t === 'experience' ? 'Pengalaman' : 'Pendidikan'}
